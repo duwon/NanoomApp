@@ -249,7 +249,9 @@ class X32Service {
     sendOSC('/xremote', []);
     sendOSC('/xinfo', []);
     sendOSC('/main/st/mix/fader', []);
-    for (int i = 1; i <= 6; i++) sendOSC('/config/mute/$i', []);
+    for (int i = 1; i <= 6; i++) {
+      sendOSC('/config/mute/$i', []);
+    }
     _refreshSceneNames();
   }
 

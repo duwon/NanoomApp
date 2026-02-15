@@ -87,7 +87,7 @@ class _MainLayoutState extends State<MainLayout> {
         ),
         body: TabBarView(
           children: [
-            const HomeScreen(),
+            HomeScreen(x32Service: _x32Service),
             const CameraScreen(),
             VMixScreen(vMixService: _vmixService),
             const PresenterScreen(),

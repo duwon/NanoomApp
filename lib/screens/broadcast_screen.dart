@@ -21,7 +21,7 @@ class _BroadcastScreenState extends State<BroadcastScreen> {
 
   // NDI Player Controller (Mock/Placeholder if actual type differs, usually implicitly handled by widget or controller)
   // The ndi_windows_player example uses simple widget direct usage or a controller.
-  bool _isPlaying = false;
+  final bool _isPlaying = false;
 
   @override
   void initState() {
@@ -131,7 +131,9 @@ class _BroadcastScreenState extends State<BroadcastScreen> {
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.surfaceVariant,
+                    color: Theme.of(
+                      context,
+                    ).colorScheme.surfaceContainerHighest,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: DropdownButtonHideUnderline(
